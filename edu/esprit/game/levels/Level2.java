@@ -31,23 +31,25 @@ public class Level2 {
 
 	/* TO DO 6: Retourner true si il y a au min un employ�s dont le salaire > 1000, false si non
 	*/
-	boolean test = employees.stream()
-			.forEach(e->{ if(e.getSalary()>100) test=true ;});/* TO DO 6 */
+		boolean test = employees.stream()
+				.anyMatch(e -> e.getSalary() > 1000);
+
 
 
 
 	/* TO DO 7: Afficher le premier employ� dont le nom commence avec s avec deux mani�res diff�rentes */
 	/*First way*/
-	employees.stream().filter(e->e.getName().charAt(0)=='s')./* TO DO 7 */
+	employees.stream().filter(e->e.getName().charAt(0)=='s').findFirst().get();/* TO DO 7 */
 	/*Second way*/
-	employees.stream()./* TO DO 7 */
+//	employees.stream()./* TO DO 7 */
 
 
 
 
 	/* TO DO 8: Afficher le second employ� dont le nom commence avec s */
-	employees.stream()./* TO DO 8 */
-		
+
+
+
 
 	}
 }
